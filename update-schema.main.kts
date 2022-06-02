@@ -121,7 +121,7 @@ fun run() {
     executeCommand("git", "push", "origin", branch)
 
     authenticateGithubCli()
-    executeCommand("gh", "pr", "create", "-f")
+    executeCommand("gh", "pr", "create", "-t", pr_title, "-b", pr_body)
 }
 
 run()
